@@ -276,6 +276,9 @@
     <IncludeSymbols>true</IncludeSymbols>
     <RuntimeIdGraphDefinitionFile>$([MSBuild]::NormalizePath('$(LibrariesProjectRoot)', 'Microsoft.NETCore.Platforms', 'src', 'runtime.json'))</RuntimeIdGraphDefinitionFile>
     <LicenseFile>$(MSBuildThisFileDirectory)LICENSE.TXT</LicenseFile>
+
+    <RestoreAdditionalProjectSources>d:\repos\roslyn\artifacts\packages\Debug\Shipping\</RestoreAdditionalProjectSources>
+
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <Copyright>$(CopyrightNetFoundation)</Copyright>
