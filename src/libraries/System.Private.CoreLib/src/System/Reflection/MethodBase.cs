@@ -247,12 +247,16 @@ namespace System.Reflection
                         ((sigType.IsEnum || arg.GetType().IsEnum) && RuntimeType.GetUnderlyingType((RuntimeType)arg.GetType()) == RuntimeType.GetUnderlyingType(sigType)));
 #endif
                     ByReference valueTypeRef = ByReference.Create(ref copyOfParameters[i]!.GetRawData());
+#pragma warning disable 8500
                     *(ByReference*)(byrefParameters + i) = valueTypeRef;
+#pragma warning restore 8500
                 }
                 else
                 {
                     ByReference objRef = ByReference.Create(ref copyOfParameters[i]);
+#pragma warning disable 8500
                     *(ByReference*)(byrefParameters + i) = objRef;
+#pragma warning restore 8500
                 }
             }
         }
